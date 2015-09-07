@@ -27,7 +27,7 @@ $ gpg \
 Decryption:
 ```bash
 $ gpg \
--o renameDicomStoreExports-dicomDirSessions.sh \
+-o 00.renameDicomStoreExports-dicomDirSessions.sh \
 --decrypt \
 00.renameDicomStoreExports-dicomDirSessions.sh.asc
 ```
