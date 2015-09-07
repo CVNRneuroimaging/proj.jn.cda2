@@ -39,9 +39,6 @@ echo ""
 echo "\$qcOutputDir (to be created by fmriqa_generate.pl) : "
 echo "${qcOutputDir}"
 echo "#####################################################"
-echo ""
-echo "(should take < 10 minutes...)"
-echo ""
 
 # create new .bxh files from the fsl/mni-oriented niftis:
 rm -fr ${niftiDirSession}/bxh+fslNifti
@@ -54,5 +51,8 @@ done
 bxhFiles="`ls ${niftiDirSession}/bxh+fslNifti/*.bxh`"
 
 # execute:
+echo ""
+echo "(should take < 10 minutes...)"
+echo ""
 rm -fr ${qcOutputDir}
 fmriqa_generate.pl ${bxhFiles} ${qcOutputDir}
