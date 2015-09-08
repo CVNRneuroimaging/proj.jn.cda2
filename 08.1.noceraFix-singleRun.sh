@@ -30,7 +30,7 @@ fixInName="`basename ${melodicOut}`"
 # construct name of fix input/output dir
 fixWeightsName=`basename ${fixWeightsFile} | sed 's/\.RData//'`
 melodicBasename="`basename ${melodicOut} | sed 's/\.melodicFixNone\.ica//'`"      # ...e.g., "cda001pre.fmri.taskCMG.run1"
-fixDirName=${melodicBasename}.melodicFix${fixWeightsName}${fixThresh}.ica            # ...e.g., "cda001pre.fmri.taskCMG.run1.melodicFixStandard20.ica"
+fixDirName=${melodicBasename}.melodicFix${fixWeightsName}${fixThresh}-${execution}.ica            # ...e.g., "cda001pre.fmri.taskCMG.run1.melodicFixStandard20.ica"
 
 # the fix input/output directory will be sibling to the original melodic directory:
 fixDirParent="`dirname ${melodicOut}`"
