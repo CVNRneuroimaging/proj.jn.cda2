@@ -41,7 +41,8 @@
 
 
 # Get the number of parallel jobs from the command line:
-parallelFixRuns=$1
+#parallelFixRuns=$1
+parallelFixRuns=10
 
 
 # The project root containing melodic .ica directories:
@@ -55,8 +56,26 @@ fixWeightsFile=/opt/fix/training_files/Standard.RData
 fixThresh=20
 
 
+# Suffix for output .ica directory indicating how processing was performed
+# e.g., "gnuParallel10rama" for 10 simultaneous gnu parallel jobs executed on rama
+# (arbitrary string...just a way to help troubleshoot output when parallel processing goes awry)
+executionSuffix=gnuParallel10
+
+echo ""
+echo "###################################################################"
+echo "Launching parallel executions of 08.1.noceraFix-singleRun.sh "
+echo ""
+echo "\$parallelFixRuns    : $parallelFixRuns"
+echo "\$fixWeightsFile     : $fixWeightsFile"
+echo "\$fixThresh          : $fixThresh"
+echo "\$executionSuffix    : $executionSuffix"
+echo "###################################################################"
+echo ""
+
 # Use gnu parallel to execute for either (but not both simultaneously):
+#
 # ...fmri taskCMG runs:
-ls -d ${niftiDirProject}/cda*/*taskCMG*melodicFixNone.ica | parallel --jobs ${parallelFixRuns} --tag --line-buffer ~stowler-local/src.mywork.gitRepos/proj.jn.cda2/08.1.noceraFix-singleRun.sh {} ${fixWeightsFile} ${fixThresh} gnuParallel
+ls -d ${niftiDirProject}/cda*/*taskCMG*melodicFixNone.ica | parallel --jobs ${parallelFixRuns} --tag --line-buffer ~stowler-local/src.mywork.gitRepos/proj.jn.cda2/08.1.noceraFix-singleRun.sh {} ${fixWeightsFile} ${fixThresh} ${executionSuffix}
+#
 # ...or fmri rest runs:
-#ls -d ${niftiDirProject}/cda*/*rest*melodicFixNone.ica | parallel --jobs ${parallelFixRuns} --tag --line-buffer ~stowler-local/src.mywork.gitRepos/proj.jn.cda2/08.1.noceraFix-singleRun.sh {} ${fixWeightsFile} ${fixThresh} gnuParallel
+#ls -d ${niftiDirProject}/cda*/*rest*melodicFixNone.ica   | parallel --jobs ${parallelFixRuns} --tag --line-buffer ~stowler-local/src.mywork.gitRepos/proj.jn.cda2/08.1.noceraFix-singleRun.sh {} ${fixWeightsFile} ${fixThresh} ${executionSuffix}
