@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# 07.noceraMelodic-rest-generateFsfVariants.sh 
+# 07.melodic-rest-generateFsfVariants.sh 
 #
 # Use existing melodic fsf files from a single session to generate melodic fsf
 # files for many sessions.

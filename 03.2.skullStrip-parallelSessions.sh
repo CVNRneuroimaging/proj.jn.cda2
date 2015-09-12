@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# 03.2.skullStrip-parallelSessions.sh
+
 # skull-strip multiple sessions in parallel
 
 # This file is just here as a place-holder to point to the script to use for actual brain extractions:

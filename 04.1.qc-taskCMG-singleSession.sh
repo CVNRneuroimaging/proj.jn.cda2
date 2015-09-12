@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# 04.1.noceraQC-taskCMG-singleSession.sh
+# 04.1.qc-taskCMG-singleSession.sh
 #
 # generate QC report for one nocera fmri category member generation (cmg)
 # session (6 runs per session)

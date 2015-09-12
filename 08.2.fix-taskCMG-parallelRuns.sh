@@ -1,8 +1,8 @@
 #!/bin/sh
 
-# 08.3.noceraFix-rest-parallelRuns.sh
+# 08.2.fix-taskCMG-parallelRuns.sh
 #
-# Applies parallel application of FIX to MELODIC .ica directories via gnu parallel calls to 08.1.noceraFix-singleRun.sh
+# Applies parallel application of FIX to MELODIC .ica directories via gnu parallel calls to 08.1.fix-singleRun.sh
 # Can be used for fmri rest or fmri taskCMG (see below).
 
 ##############
@@ -35,13 +35,12 @@
 #############
 #
 # New FIX-corrected melodic .ica directory for each input run.  See
-# 08.1.noceraFix-singleRun.sh , which parses FIX parameters to name its new
+# 08.1.fix-singleRun.sh , which parses FIX parameters to name its new
 # FIX-corrected .ica directories.
 #
 
 
 # Get the number of parallel jobs from the command line:
-# ...please consider changing executionSuffix (below) to reflect this parameters:
 #parallelFixRuns=$1
 parallelFixRuns=10
 
@@ -64,7 +63,7 @@ executionSuffix=gnuParallel10
 
 echo ""
 echo "###################################################################"
-echo "Launching parallel executions of 08.1.noceraFix-singleRun.sh "
+echo "Launching parallel executions of 08.1.fix-singleRun.sh "
 echo ""
 echo "parallelFixRuns    : $parallelFixRuns"
 echo "fixWeightsFile     : $fixWeightsFile"
@@ -76,7 +75,7 @@ echo ""
 # Use gnu parallel to execute for either (but not both simultaneously):
 #
 # ...fmri taskCMG runs:
-#ls -d ${niftiDirProject}/cda*/*taskCMG*melodicFixNone.ica | parallel --jobs ${parallelFixRuns} --tag --line-buffer ~stowler-local/src.mywork.gitRepos/proj.jn.cda2/08.1.noceraFix-singleRun.sh {} ${fixWeightsFile} ${fixThresh} ${executionSuffix}
+ls -d ${niftiDirProject}/cda*/*taskCMG*melodicFixNone.ica | parallel --jobs ${parallelFixRuns} --tag --line-buffer ~stowler-local/src.mywork.gitRepos/proj.jn.cda2/08.1.fix-singleRun.sh {} ${fixWeightsFile} ${fixThresh} ${executionSuffix}
 #
 # ...or fmri rest runs:
-ls -d ${niftiDirProject}/cda*/*rest*melodicFixNone.ica   | parallel --jobs ${parallelFixRuns} --tag --line-buffer ~stowler-local/src.mywork.gitRepos/proj.jn.cda2/08.1.noceraFix-singleRun.sh {} ${fixWeightsFile} ${fixThresh} ${executionSuffix}
+#ls -d ${niftiDirProject}/cda*/*rest*melodicFixNone.ica   | parallel --jobs ${parallelFixRuns} --tag --line-buffer ~stowler-local/src.mywork.gitRepos/proj.jn.cda2/08.1.fix-singleRun.sh {} ${fixWeightsFile} ${fixThresh} ${executionSuffix}

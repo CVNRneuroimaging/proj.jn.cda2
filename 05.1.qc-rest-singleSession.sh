@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# 05.1.noceraQC-rest-singleSession.sh
+# 05.1.qc-rest-singleSession.sh
 #
 # generate QC report for one nocera fmri rest session (1 run per session)
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# proj.jn.cda2-projectEnvironment.sh
+# 00.projectEnvironment.sh
 #
 # setup environment for subsequent scripts
 

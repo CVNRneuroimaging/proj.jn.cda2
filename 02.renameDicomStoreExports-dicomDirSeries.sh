@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 01.renameDicomStoreExport-dicomDirSeries.sh
+# 02.renameDicomStoreExports-dicomDirSeries.sh
 #
 # Create groomed directories of dicoms for conversion to nifti. "Groomed"
 # meaning that each dicomdir name has been set to the name that the eventual

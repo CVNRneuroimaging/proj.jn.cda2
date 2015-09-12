@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# 08.1.fix-singleRun.sh
+
 # Applying FIX to a single melodic output directory should take fewer than 10 minutes on most modern hardware:
 
 ############# arguments: ############
@@ -21,7 +23,7 @@ fixWeightsFile=$2
 fixThresh=$3
 
 # how this script is being executed. just affects output naming.
-# example: serial, parallel.gnu, parallel.ppss, parallel.tmux
+# example: serial, parallel.gnu, parallel.ppss, parallel.tmux, gnuParallel10
 execution=$4
 
 # get basename so it can be used in stdout/logs:
