@@ -13,7 +13,7 @@
 # 
 # $ tree -L 2 | head
 # .
-# ├── cda001pre.fsfFiles
+# ├── cda001pre-fsfFiles-taskCMG
 # │   ├── cda001pre.fmri.taskCMG.run1.melodicFixNone_design.fsf
 # │   ├── cda001pre.fmri.taskCMG.run2.melodicFixNone_design.fsf
 # │   ├── cda001pre.fmri.taskCMG.run3.melodicFixNone_design.fsf
@@ -26,17 +26,17 @@
 
 # sessionIDlist for rama re-processing 20150903-6:
 # ...NB: the template (cda001pre) is omitted from this list to avoid a recursive loop.
-#sessionIDlist="cda001pst cda002pre cda002pst cda003pre cda003pst cda004pre cda004pst cda005pre cda005pst cda006pre cda006pst cda007pre cda007pst cda008pre cda008pst cda009pre cda010pre cda010pst cda011pre cda012pre cda013pre cda100pre cda100pst cda101pre cda101pst cda102pre cda102pst cda103pre cda103pst cda104pre cda104pst cda105pre cda106pre cda107pre cda108pre cda109pre cda109pst"
+sessionIDlist="cda001pst cda002pre cda002pst cda003pre cda003pst cda004pre cda004pst cda005pre cda005pst cda006pre cda006pst cda007pre cda007pst cda008pre cda008pst cda009pre cda010pre cda010pst cda011pre cda012pre cda013pre cda100pre cda100pst cda101pre cda101pst cda102pre cda102pst cda103pre cda103pst cda104pre cda104pst cda105pre cda106pre cda107pre cda108pre cda109pre cda109pst"
 
 # directory containing single-session fsf files that will act as template for
 # other sessions:
-fsfTemplateDir=cda001pre.fsfFiles
+fsfTemplateDir=cda001pre-fsfFiles-taskCMG
 
 for sessionID in `echo ${sessionIDlist}`; do
    newSessionID="$sessionID"
 
    # create a copy of the existing template directory:
-   newFsfDir=${newSessionID}.fsfFiles
+   newFsfDir=${newSessionID}-fsfFiles-taskCMG
    cp -r ${fsfTemplateDir} ${newFsfDir}
 
    # change fsf file names to reflect new sessionID:
