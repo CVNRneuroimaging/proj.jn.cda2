@@ -57,8 +57,10 @@ export sessionsTypical="${sessionsTypicalExercise} ${sessionsTypicalControl}"
 # is missing RSFMRI, which isn't relevant for 2015Nov analysis:
 export sessions2015NovExercisePst="${sessionsTypicalExercisePst} cda004pst"
 export sessions2015NovExercisePre="`echo ${sessions2015NovExercisePst} | sed 's/pst/pre/g'`"
+export sessions2015NovExercise="${sessions2015NovExercisePre} ${sessions2015NovExercisePst}"
 #echo $sessions2015NovExercisePre
 #echo $sessions2015NovExercisePst
+#echo $sessions2015NovExercise
 
 
 
