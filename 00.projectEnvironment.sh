@@ -52,7 +52,7 @@ cat /tmp/missingOutputList.txt
 
 
 export projDir="/data/panolocal/processedOnPano-nocera"
-export scriptDir="~stowler-local/src.mywork.gitRepos/proj.jn.cda2"
+export scriptDir="/home/stowler-local/src.mywork.gitRepos/proj.jn.cda2"
 
 ###########################################################
 # "typical" sessions include: 
@@ -110,9 +110,9 @@ export sessions2015NovExercise="${sessions2015NovExercisePre} ${sessions2015NovE
 #echo $sessions2015NovExercise
 
 
-export sessions2015NovControlPst="${sessionsTypicalControlPst}"
-export sessions2015NovControlPre="`echo ${sessions2015NovControlPst} | sed 's/pst/pre/g'`"
-export sessions2015NovControl="${sessions2015NovControlPre} ${sessions2015NovControlPst}"
+#export sessions2015NovControlPst="${sessionsTypicalControlPst}"
+#export sessions2015NovControlPre="`echo ${sessions2015NovControlPst} | sed 's/pst/pre/g'`"
+#export sessions2015NovControl="${sessions2015NovControlPre} ${sessions2015NovControlPst}"
 #echo "sessions2015NovControlPre:"
 #echo $sessions2015NovControlPre
 #echo "sessions2015NovControlPst"
@@ -133,4 +133,4 @@ export sessions2015NovControl="${sessions2015NovControlPre} ${sessions2015NovCon
 #echo "$sessionsTypical_column"
 
 
-fxnCheckSessions "$sessions2015NovControlPre"
+#fxnCheckSessions "$sessions2015NovControlPre"
