@@ -113,10 +113,10 @@ export sessions2015NovExercise="${sessions2015NovExercisePre} ${sessions2015NovE
 export sessions2015NovControlPst="${sessionsTypicalControlPst}"
 export sessions2015NovControlPre="`echo ${sessions2015NovControlPst} | sed 's/pst/pre/g'`"
 export sessions2015NovControl="${sessions2015NovControlPre} ${sessions2015NovControlPst}"
-echo "sessions2015NovControlPre:"
-echo $sessions2015NovControlPre
-echo "sessions2015NovControlPst"
-echo $sessions2015NovControlPst
+#echo "sessions2015NovControlPre:"
+#echo $sessions2015NovControlPre
+#echo "sessions2015NovControlPst"
+#echo $sessions2015NovControlPst
 #echo "sessions2015NovControl"
 #echo $sessions2015NovControl
 
@@ -133,4 +133,4 @@ echo $sessions2015NovControlPst
 #echo "$sessionsTypical_column"
 
 
-#fxnCheckSessions "$sessions2015NovControlPre"
+fxnCheckSessions "$sessions2015NovControlPre"
