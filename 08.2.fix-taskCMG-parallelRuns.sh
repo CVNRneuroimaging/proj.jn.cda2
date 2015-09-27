@@ -53,7 +53,7 @@ niftiDirProject=/data/panolocal/processedOnPano-nocera/derivedData
 # NB: not receiving $fixThresh from command line argument because of potential
 # confusion with commandline argument for $parallelFixRuns:
 fixWeightsFile=/opt/fix/training_files/WhII_Standard.RData
-fixThresh=15
+fixThresh=10
 
 
 # Suffix for output .ica directory indicating how processing was performed
