@@ -63,8 +63,8 @@ export scriptDir="/home/stowler-local/src.mywork.gitRepos/proj.jn.cda2"
 # ...which means that the following are atypical sessions:
 #
 # cda004pst - missing rest (participant's decision)
-# cda009pre - missing anat and rest in acqfiles-nifti and derivedData (TBD: resolve)
-# cda106pre - missing anat in acqfiles-nifti and derivedData (TBD: resolve)
+# cda009pre - missing anat and rest in acqfiles-nifti and derivedData (TBD: resolve...lower priority b/c d/c before post)
+# cda106pre - missing anat in acqfiles-nifti and derivedData (TBD: resolve...lower priority b/c d/c before post)
 # cda011pre and cda011pst - potential pre/post confusion needs to be re-confirmed
 # cda011pst - acquired three runs instead of six (eprime issues)
 #export sessionsAtypical="cda004pst cda009pre cda011pre cda011pst cda106pre"
@@ -110,9 +110,9 @@ export sessions2015NovExercise="${sessions2015NovExercisePre} ${sessions2015NovE
 #echo $sessions2015NovExercise
 
 
-#export sessions2015NovControlPst="${sessionsTypicalControlPst}"
-#export sessions2015NovControlPre="`echo ${sessions2015NovControlPst} | sed 's/pst/pre/g'`"
-#export sessions2015NovControl="${sessions2015NovControlPre} ${sessions2015NovControlPst}"
+export sessions2015NovControlPst="${sessionsTypicalControlPst}"
+export sessions2015NovControlPre="`echo ${sessions2015NovControlPst} | sed 's/pst/pre/g'`"
+export sessions2015NovControl="${sessions2015NovControlPre} ${sessions2015NovControlPst}"
 #echo "sessions2015NovControlPre:"
 #echo $sessions2015NovControlPre
 #echo "sessions2015NovControlPst"
@@ -133,4 +133,4 @@ export sessions2015NovExercise="${sessions2015NovExercisePre} ${sessions2015NovE
 #echo "$sessionsTypical_column"
 
 
-#fxnCheckSessions "$sessions2015NovControlPre"
+fxnCheckSessions "$sessions2015NovControlPre"
